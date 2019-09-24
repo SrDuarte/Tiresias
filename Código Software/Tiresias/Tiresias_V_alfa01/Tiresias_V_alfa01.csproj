@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6482B617-6A9C-44A5-A132-4C7E68A11893}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Tiresias_V_alfa01</RootNamespace>
+    <AssemblyName>Tiresias_V_alfa01</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Speech, Version=11.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft SDKs\Speech\v11.0\Assembly\Microsoft.Speech.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="appCode\BLL\partituraBLL.cs" />
+    <Compile Include="appCode\DAL\partituraDAL.cs" />
+    <Compile Include="appCode\GerarPDF.cs" />
+    <Compile Include="appCode\Partitura.cs" />
+    <Compile Include="appCode\Pauta.cs" />
+    <Compile Include="appCode\retornaSimbolos.cs" />
+    <Compile Include="bancoDadosDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bancoDadosDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucAuxPartituraSalva.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucAuxPartituraSalva.Designer.cs">
+      <DependentUpon>ucAuxPartituraSalva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucDeletarPartitura.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucDeletarPartitura.Designer.cs">
+      <DependentUpon>ucDeletarPartitura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucImprimir.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucImprimir.Designer.cs">
+      <DependentUpon>ucImprimir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucInfo.Designer.cs">
+      <DependentUpon>ucInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucLetraPartitura.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucLetraPartitura.Designer.cs">
+      <DependentUpon>ucLetraPartitura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucPartiturasSalvas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucPartiturasSalvas.Designer.cs">
+      <DependentUpon>ucPartiturasSalvas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ucDashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucDashboard.Designer.cs">
+      <DependentUpon>ucDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucMusicas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucMusicas.Designer.cs">
+      <DependentUpon>ucMusicas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucPartitura.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucPartitura.Designer.cs">
+      <DependentUpon>ucPartitura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucSelecionarPartituraInserirLetra.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucSelecionarPartituraInserirLetra.Designer.cs">
+      <DependentUpon>ucSelecionarPartituraInserirLetra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucSifras.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucSifras.Designer.cs">
+      <DependentUpon>ucSifras.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucAuxPartituraSalva.resx">
+      <DependentUpon>ucAuxPartituraSalva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucDeletarPartitura.resx">
+      <DependentUpon>ucDeletarPartitura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucImprimir.resx">
+      <DependentUpon>ucImprimir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucInfo.resx">
+      <DependentUpon>ucInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucLetraPartitura.resx">
+      <DependentUpon>ucLetraPartitura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucPartiturasSalvas.resx">
+      <DependentUpon>ucPartiturasSalvas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucDashboard.resx">
+      <DependentUpon>ucDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucPartitura.resx">
+      <DependentUpon>ucPartitura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucSelecionarPartituraInserirLetra.resx">
+      <DependentUpon>ucSelecionarPartituraInserirLetra.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="bancoDadosDataSet.xsc">
+      <DependentUpon>bancoDadosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bancoDadosDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bancoDadosDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bancoDadosDataSet.xss">
+      <DependentUpon>bancoDadosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abrir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imprimir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salvar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sifra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sifra2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sifra3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TiresiasFont.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\voltar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\audio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delNota.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\voltar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addNota.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tiresiasIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelarNota.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imprimirPartitura.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\removerNota.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salvarPartitura.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="appData\bancoDados.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="appData\bancoDados_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>bancoDados.mdf</DependentUpon>
+    </Content>
+    <None Include="Resources\info.png" />
+    <None Include="Resources\partitura.png" />
+    <None Include="Resources\braille.png" />
+    <None Include="Resources\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="pdf\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

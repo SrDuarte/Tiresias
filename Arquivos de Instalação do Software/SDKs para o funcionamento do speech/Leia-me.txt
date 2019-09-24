@@ -1,0 +1,1 @@
+arquivos necessarios para o funcionamento do speech, portanto instale todos as dependencias.

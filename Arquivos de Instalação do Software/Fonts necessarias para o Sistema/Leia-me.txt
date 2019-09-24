@@ -1,0 +1,1 @@
+fonts necessarias para a execucao do sistema, portanto copie e cole as fontes na pasta c:/Windows/fonts
